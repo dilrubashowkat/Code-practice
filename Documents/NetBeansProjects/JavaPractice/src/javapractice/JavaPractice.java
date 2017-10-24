@@ -22,7 +22,8 @@ public class JavaPractice {
             System.out.println(r[i]+"\t");
         return;
     }
-    public static void reverse_array(int number){
+    public static void reverse_array(int number) //this method reverses a given integer input #7
+    {
         int val = number;
         int result = 0;
         while(number!=0)
@@ -34,7 +35,7 @@ public class JavaPractice {
         }
         System.out.println("Reverse integer of " + val +" "+ "is " + result);
     }
-    public static void sum_two(int array[], int number) //A method that prints the two numbers when add up gives the target number.
+    public static void sum_two(int array[], int number) //A method that prints the two numbers when add up gives the target number. #1
     {
  
         int res []= new int[2];
