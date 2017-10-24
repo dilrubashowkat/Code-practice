@@ -23,17 +23,18 @@ public class JavaPractice {
         return;
     }
     public static void sum_two(int array[], int number){
-        int result = 0;
+ 
         int res []= new int[2];
         HashMap<Integer,Integer> hm= new HashMap<Integer,Integer>();
-        for(int i=0;i<array.length;i++){
-        if(hm.containsKey(number-array[i])){
-            res[1]=i+1;
-            res[0]=hm.get(number-array[i]);
-            printArray(res);
+        for(int i=0;i<array.length;i++)
+        {
+            if(hm.containsKey(number-array[i])){
+                res[1]=i+1;
+                res[0]=hm.get(number-array[i]);
+                printArray(res);
             break;
         }
-        hm.put(array[i], i+1);
+            hm.put(array[i], i+1);
         }
    
     }
