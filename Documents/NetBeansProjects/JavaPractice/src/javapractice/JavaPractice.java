@@ -22,7 +22,20 @@ public class JavaPractice {
             System.out.println(r[i]+"\t");
         return;
     }
-    public static void sum_two(int array[], int number){
+    public static void reverse_array(int number){
+        int val = number;
+        int result = 0;
+        while(number!=0)
+        {
+            int rem = number%10;
+            result = result*10 + rem;
+            
+            number /= 10;
+        }
+        System.out.println("Reverse integer of " + val +" "+ "is " + result);
+    }
+    public static void sum_two(int array[], int number) //A method that prints the two numbers when add up gives the target number.
+    {
  
         int res []= new int[2];
         HashMap<Integer,Integer> hm= new HashMap<Integer,Integer>();
@@ -45,7 +58,8 @@ public class JavaPractice {
         int make = 7;
         sum_two(nums,make);
         
-        
+        int target = 97333;
+        reverse_array(target);
         
     }
     
