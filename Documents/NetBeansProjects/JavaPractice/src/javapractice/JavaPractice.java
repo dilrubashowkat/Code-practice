@@ -16,6 +16,10 @@ public class JavaPractice {
      * @param args the command line arguments
      * 
      */
+    public static void Sting_to_Int()
+    {
+        
+    }
     public static void printArray(int r[]){
         
         for(int i=0;i<r.length;i++)

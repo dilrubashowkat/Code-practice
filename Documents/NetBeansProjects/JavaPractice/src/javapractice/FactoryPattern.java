@@ -11,5 +11,15 @@ package javapractice;
  */
 public class FactoryPattern {
     
+    public static void main(String[] args) {
+        ClassFactory obj = new ClassFactory();
+        
+        FactoryShape cobj = obj.Return_Object("circle");  
+        cobj.shape(9);
+        
+        cobj = obj.Return_Object("square");  
+        cobj.shape(5);
+        
+    }
     
 }
