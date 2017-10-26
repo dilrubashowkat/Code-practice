@@ -16,8 +16,46 @@ public class JavaPractice {
      * @param args the command line arguments
      * 
      */
-    public static void Sting_to_Int()
+    public static void Sting_to_Int(String ss)
     {
+       long number = 0; int sign = 0; 
+       char firstC = 0;
+       int len = ss.length();
+       int start = 0;
+       
+       if(ss==null)
+            System.out.println("not a number");
+       firstC = ss.charAt(0);
+       
+       if(firstC == '-')
+          {
+           sign = -1;
+           start = 1;
+          }
+       
+       
+       else if(firstC == '+')
+        {
+           sign = 1;
+           start = 1;
+        }
+       
+       for(int i=start;i<len;i++)
+       {
+            if(!Character.isDigit(ss.charAt(i)))
+            { number = sign*number;
+              break;
+            }
+               
+            number = number*10+ss.charAt(i)-'0';
+            if(sign==1 && number>Integer.MAX_VALUE)
+                 number = Integer.MAX_VALUE;
+            if(sign==-1 && number<Integer.MIN_VALUE)
+                 number = Integer.MIN_VALUE;
+
+       }
+       
+        System.out.println("Atoi: String -> Number (Integer)"+number);
         
     }
     public static void printArray(int r[]){
@@ -65,6 +103,9 @@ public class JavaPractice {
         
         int target = 97333;
         reverse_array(target);
+        
+        String s = "795";
+        Sting_to_Int(s);
         
     }
     
