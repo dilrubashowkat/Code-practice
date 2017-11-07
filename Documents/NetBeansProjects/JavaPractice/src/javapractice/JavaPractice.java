@@ -16,7 +16,23 @@ public class JavaPractice {
      * @param args the command line arguments
      * 
      */
-    public static void Sting_to_Int(String ss)
+    public static boolean palindrome_Number(long number)
+    {
+        boolean bool = false;
+        if(number<0 || (number>0 && number%10==0))
+            bool = false;
+        long revVal=0;
+        long num = number;
+        while(number!=0)
+        {
+            revVal = revVal*10+ number%10;
+            number = number/10;
+        }
+        if(num==revVal)
+            bool = true;
+        return bool;
+    }
+    public static void Sting_to_Int(String ss) //this method converts a given String to number #8
     {
        long number = 0; int sign = 0; 
        char firstC = 0;
@@ -106,6 +122,12 @@ public class JavaPractice {
         
         String s = "795";
         Sting_to_Int(s);
+        long number = 12;
+        if(palindrome_Number(number))
+            System.err.println("palindrome");
+        else
+           System.err.println("Not palindrome");
+
         
     }
     
